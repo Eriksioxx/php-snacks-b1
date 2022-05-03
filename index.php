@@ -106,6 +106,6 @@ for($i=0; $i < count($succhia); $i++) {
 Ogni alunno avrà Nome, Cognome e un array contenente i suoi voti scolastici. Stampare Nome, Cognome e la media dei voti di ogni alunno.</h3>
 
 <?php
-
-
 ?>
+
+da fare....
