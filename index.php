@@ -37,29 +37,24 @@ $partitaBasket = [
     echo('</pre>');
 ?>
 
+<hr>
+
 <h1  style="color: red">Snack 2</h1>
 <h3 style="color: purple">Passare come parametri GET name, mail e age e verificare (cercando i metodi che non conosciamo nella documentazione) 
 che name sia più lungo di 3 caratteri, che mail contenga un punto e una chiocciola e che age sia un numero. Se tutto è ok stampare “Accesso riuscito”, 
 altrimenti “Accesso negato”</h3>
-<?php
-$partitaBasket = [
-    [
-        "squadra1" => "Italia",
-        "squadra2" => "Germania",
-        "Punteggio1" => "92",
-        "punteggio2" => "82",
-    ],
-    [
-        "squadra1" => "Germania",
-        "squadra2" => "Italia",
-        "Punteggio1" => "75",
-        "punteggio2" => "84",
-    ]
-    ];
 
-    echo('<pre>');
-    var_dump($partitaBasket);
-    echo('</pre>');
+<?php
+$name = $_GET["name"];
+$mail = $_GET["mail"];
+$age = $_GET["age"];
+
+if (strlen($name) > 3 && strpos($mail,'@')==false && strpos($mail,'.')==false) {
+    echo('<h4>ACCESSO RIUSCITO</h4>');
+} else {
+    echo('<h4>ACCESSO NON RIUSCITO</h4>');
+}
+
 ?>
 
 
