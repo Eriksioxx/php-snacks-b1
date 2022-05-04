@@ -22,20 +22,30 @@ $partitaBasket = [
         "squadra1" => "Italia",
         "squadra2" => "Germania",
         "Punteggio1" => "92",
-        "punteggio2" => "82",
+        "Punteggio2" => "82",
     ],
     [
         "squadra1" => "Germania",
         "squadra2" => "Italia",
         "Punteggio1" => "75",
-        "punteggio2" => "84",
+        "Punteggio2" => "84",
     ]
     ];
 
     echo('<pre>');
     var_dump($partitaBasket);
     echo('</pre>');
+
+    for($i=0; $i < count($partitaBasket); $i++) {
+        
+        $partita = $partitaBasket[$i];
+    echo($partita["squadra1"] . '-' . $partita["squadra2"] . '|' . $partita["Punteggio1"] . '-' . $partita["Punteggio2"]. "<br>");
+
+    }
+
 ?>
+
+
 
 <hr>
 
